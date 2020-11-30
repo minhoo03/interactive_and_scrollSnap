@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snap</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .container{
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+        .snap{
+            scroll-snap-align: center;
+            height: 100vh;
+        }
+        .as{
+            background: #000;
+        }
+        .sd {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container snap">
+        <div class="snap as"></div>
+        <div class="snap sd"></div>
+    </div>
+</body>
+</html>
