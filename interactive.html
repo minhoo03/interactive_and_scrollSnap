@@ -4,22 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mouseEvent</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 </head>
 <body>
-    <div class="container snap">
-        <header class="interactive snap">
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+    <div class="container">
+        <header class="snap" style="background-color: #000;">
             <div class="layer"></div>
             <img src="./img/if_covid19.png" alt="text_if" class="text_if">
             <img src="./img/pipe.png" alt="pipe" class="pipe">
             <img src="./img/doctor_black.jpg" alt="wall" class="bg">      
-            <h1></h1>
         </header>
-        <section class="snap" style="background-color: wheat;"></section>
-        <section class="snap"></section>
-        <section class="snap"></section>
+
+        <section class="snap intro_snap" style="overflow: hidden;">
+            <img src="./img/seoulMap.png" alt="map" class="seoulMap">
+
+            
+            <div class="intro" >
+                <h1 class="intro_title">sss</h1>
+                <div class="covid_relactive">
+                    <img src="./img/covid_noBg.png" alt="covid19Bg" class="covid19_2 covid19">
+                    <img src="./img/covid_noBg.png" alt="covid19Bg" class="covid19_1 covid19">
+                    <img src="./img/covid_noBg.png" alt="covid19Bg" class="covid19_3 covid19">
+                </div>
+                <div class="text_relactive">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur illum expedita quis laboriosam molestiae laudantium. Vel quia quidem alias dolorem rerum totam explicabo amet culpa odit, dolores officia eum?
+                    Eum dolorem hic quos assumenda officiis omnis vel delectus asperiores voluptates ipsam. Tenetur sequi nam ex aliquid fugit unde voluptatibus, error, porro cupiditate officiis eius animi, molestiae enim quos corporis.
+                    Possimus et aliquam veritatis quis. Id fugit nobis culpa commodi quidem corporis minima maiores? Totam, vero, similique veritatis exercitationem ad recusandae placeat quasi dolorum alias eligendi quas, sequi labore nam!</p>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="snap"></section>
+        <section class="snap"></section> -->
     </div>
-    <!-- 코로나맵 패럴랙스로 이동 href -->
 </body>
 <script src="./js/app.js"></script>
 </html>

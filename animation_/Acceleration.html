@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="background-color: red;"></div>
+    <div class="box" style="background-color: blue;"></div>
+    <div class="box" style="background-color: black;"></div>
+    <div class="box"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $("html").niceScroll({cursorwidth: '10px', autohidemode: false, zindex: 999 });
+});
+</script>
+</html>

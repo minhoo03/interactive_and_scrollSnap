@@ -1,32 +1,29 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
-
 body {
+    transition: 2s;
     position: relative;
-    overflow: hidden;
     background: #000;
 }
 
-/* snap layer */
-.container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
 .snap {
-    scroll-snap-align: center;
+    position: relative;
     height: 100vh;
 }
 
 /* header > */
 header {
-    position: relative;
+    overflow: hidden;
     min-width: 100%;
 }
 
-.interactive {
-    overflow: hidden;
+.bg {
+    min-width: 100%;
+    z-index: 300;
+    height: auto;
 }
 
 .text_if {
@@ -39,13 +36,6 @@ header {
     animation-delay: 1.7s;
     opacity: 0;
 }
-
-.bg {
-    min-width: 100%;
-    z-index: 300;
-    height: auto;
-}
-
 .pipe {
     position: absolute;
     top: 200px;
@@ -68,6 +58,67 @@ header {
     z-index: 200;
     animation: backgroundFadeIn 3s 0s forwards;
 }
+
+/* 2.snap */
+
+.seoulMap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition: 3s;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.covid_relactive {
+    position: relative;
+}
+
+.covid19_1 {
+    opacity: 0;
+    width: 400px;
+    height: 300px;
+}
+.covid19_2 {
+    position: absolute;
+    left: 0%;
+    top: 40%;
+    opacity: 0;
+    width: 200px;
+    z-index: 20;
+}
+.covid19_3 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    opacity: 0;
+    width: 130px;
+}
+
+/* text */
+.text_relactive {
+    max-width: 400px;
+    padding: 40px;
+    background: #fff;
+    opacity: 0;
+    margin: 10px;
+}
+
+.intro_title {
+    position: absolute;
+    color: #fff;
+    top: 20px;
+}
+
+/* animation */
 
 @keyframes upDown {
     0% {
@@ -104,6 +155,40 @@ header {
     }
 }
 
+@keyframes fadeInRotate {
+    0% {
+        margin-top: 150px;
+        transform: rotate(-25deg);
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        transform: rotate(0deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes fadeInOp5 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        margin-top: 150px;
+    }
+    65% {
+        margin-bottom: 200px;
+    }
+    100% {
+        margin-bottom: 150px;
+    }
+}
+
 @media (max-width: 950px) {
     .text_if {
         width: 300px;
@@ -111,4 +196,36 @@ header {
     .pipe {
         display: none;
     }
+
+    .covid19_1,
+    .covid19_2,
+    .covid19_3 {
+        display: none;
+    }
+
+    .text_relactive {
+        margin: 0 auto;
+    }
+}
+
+/* progress */
+
+.progress {
+    position: fixed;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 500;
+}
+.bar {
+    position: fixed;
+    width: 100%;
+    height: 6px;
+    border-radius: 0 10px 10px 0;
+    top: 0;
+    left: 0;
+    background: yellow;
+    z-index: 501;
 }
